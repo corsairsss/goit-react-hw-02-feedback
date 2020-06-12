@@ -1,0 +1,1 @@
+{"version":3,"sources":["FeedBackOptions.module.css"],"names":[],"mappings":"AAAA,4BACI,cAAe,CACf,gBAAiB,CACjB,iBAAkB,CAClB,qBAAsB,CACtB,qBAEJ","file":"main.d9917373.chunk.css","sourcesContent":[".btn{\r\n    cursor: pointer;\r\n    margin-left: 10px;\r\n    border-radius: 5px;\r\n    border:1px solid black;\r\n    background-color: #fff;\r\n\r\n}\r\n"]}
