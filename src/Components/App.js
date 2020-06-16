@@ -12,12 +12,10 @@ export default class App extends Component {
     bad: 0,
   };
 
-  LeaveFeedback = type => {
+  LeaveFeedback = ({ target }) => {
+    const type = target.dataset.type;
     this.setState(prevState => {
-      const newState = {
-        [type]: prevState[type] + 1,
-      };
-      return { ...prevState, ...newState };
+      return { ...prevState, [type]: prevState[type] + 1 };
     });
   };
 
@@ -31,13 +29,14 @@ export default class App extends Component {
   render() {
     const totalFB = this.total();
     const positiveFeedback = this.positivePercentage(totalFB);
+    const isShowStatistic = this.total() !== 0;
     return (
       <>
         <Section title={'Please Leave Feedback'}>
           <FeedBackOptions onLeaveFeedback={this.LeaveFeedback} />
         </Section>
         <Section title={'Statistic'}>
-          {this.total() !== 0 && (
+          {isShowStatistic && (
             <Statistic
               stats={this.state}
               total={totalFB}
@@ -45,7 +44,7 @@ export default class App extends Component {
             />
           )}
         </Section>
-        {this.total() === 0 && (
+        {isShowStatistic && (
           <Notification message="No feedback given"></Notification>
         )}
       </>

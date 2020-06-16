@@ -8,21 +8,24 @@ export default function FeedBackOptions({ onLeaveFeedback }) {
       <button
         className={s.btn}
         type="button"
-        onClick={() => onLeaveFeedback('good')}
+        onClick={onLeaveFeedback}
+        data-type="good"
       >
         GOOD
       </button>
       <button
         className={s.btn}
         type="button"
-        onClick={() => onLeaveFeedback('neutral')}
+        onClick={onLeaveFeedback}
+        data-type="neutral"
       >
         Neutral
       </button>
       <button
         className={s.btn}
         type="button"
-        onClick={() => onLeaveFeedback('bad')}
+        onClick={onLeaveFeedback}
+        data-type="bad"
       >
         Bad
       </button>
