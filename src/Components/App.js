@@ -44,7 +44,7 @@ export default class App extends Component {
             />
           )}
         </Section>
-        {isShowStatistic && (
+        {!isShowStatistic && (
           <Notification message="No feedback given"></Notification>
         )}
       </>
